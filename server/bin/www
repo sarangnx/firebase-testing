@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+const { app, server } = require('../src/app');
+
+const port = 3000
+app.set('port', port);
+
+server.listen(port);
+
+server.on('listening', () => {
+    console.log(`Server up and running on port : ${port}`);
+});
